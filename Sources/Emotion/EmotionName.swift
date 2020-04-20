@@ -5,7 +5,7 @@
 import Swift
 
 public enum EmotionName {
-    public enum Aristotelian: CaseIterable, Codable {
+    public enum Aristotelian: String, CaseIterable, Codable {
         case anger_calmness
         case friendship
         case fear_courage
@@ -17,7 +17,7 @@ public enum EmotionName {
         case love
     }
 
-    public enum Berkley: CaseIterable, Codable {
+    public enum Berkley: String, CaseIterable, Codable {
         case admiration
         case adoration
         case aestheticAppreciation
@@ -47,7 +47,7 @@ public enum EmotionName {
         case triump
     }
 
-    public enum Plutchik: CaseIterable, Codable {
+    public enum Plutchik: String, CaseIterable, Codable {
         case fear
         case anger
         case sadness

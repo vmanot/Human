@@ -15,7 +15,6 @@ let package = Package(
     ],
     targets: [
         .target(name: "Human", dependencies: [], path: "Sources"),
-        .testTarget(name: "HumanTests", dependencies: ["Human"], path: "Tests")
     ],
     swiftLanguageVersions: [
         .version("5.1")
