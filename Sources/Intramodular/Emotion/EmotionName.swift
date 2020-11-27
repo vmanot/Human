@@ -16,7 +16,7 @@ public enum EmotionName {
         case envy
         case love
     }
-
+    
     public enum Berkley: String, CaseIterable, Codable {
         case admiration
         case adoration
@@ -46,7 +46,7 @@ public enum EmotionName {
         case sympathy
         case triump
     }
-
+    
     public enum Plutchik: String, CaseIterable, Codable {
         case fear
         case anger
@@ -57,7 +57,7 @@ public enum EmotionName {
         case trust
         case anticipation
     }
-
+    
     case aristotelian(Aristotelian)
     case berkley(Berkley)
     case plutchik(Plutchik)

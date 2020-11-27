@@ -1,22 +1,27 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.3
 
 import PackageDescription
 
 let package = Package(
     name: "Human",
     platforms: [
-        .iOS(.v13),
-        .macOS(.v10_15),
-        .tvOS(.v13),
-        .watchOS(.v6)
+        .iOS("14.0"),
+        .macOS("11.0"),
+        .tvOS("14.0"),
+        .watchOS("7.0")
     ],
     products: [
         .library(name: "Human", targets: ["Human"])
     ],
-    targets: [
-        .target(name: "Human", dependencies: [], path: "Sources"),
+    dependencies: [
+        .package(url: "https://github.com/vmanot/Emoji.git", .branch("master")),
+        .package(url: "https://github.com/vmanot/SwiftDB.git", .branch("master")),
     ],
-    swiftLanguageVersions: [
-        .version("5.1")
+    targets: [
+        .target(
+            name: "Human",
+            dependencies: ["Emoji", "SwiftDB"],
+            path: "Sources"
+        ),
     ]
 )
